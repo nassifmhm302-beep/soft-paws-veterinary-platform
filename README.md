@@ -17,7 +17,7 @@ npm run dev
 
 يتم البناء تلقائياً عبر GitHub Actions عند الدفع إلى فرع `main`، ثم النشر إلى GitHub Pages.
 
-إذا ظهر فشل أول تشغيل بسبب أن Pages غير مفعّلة، افتح `Settings → Pages` في المستودع، واختر `Source: GitHub Actions` من قسم **Build and deployment**، ثم أعد تشغيل Workflow باسم `Deploy to GitHub Pages`.
+في حال عدم ظهور خيار GitHub Actions، افتح `Settings → Pages`، واختر `Source: Deploy from a branch`، ثم اختر الفرع `gh-pages` والمجلد `/(root)` واضغط `Save`. الـWorkflow يبني نسخة الموقع من `main` ويرفعها تلقائياً إلى `gh-pages`.
 
 ## ملاحظة مهمة
 
