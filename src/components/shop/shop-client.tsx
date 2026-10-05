@@ -170,7 +170,7 @@ export function ShopClient({ products, categories }: { products: Product[]; cate
       {visible < filtered.length && (
         <Reveal className="mt-14 text-center">
           <button type="button" onClick={() => setVisible((v) => v + PAGE_SIZE)} className="btn btn-outline">
-            عرض المزيد
+            انتقل وتصفح باقي المنتجات
           </button>
         </Reveal>
       )}

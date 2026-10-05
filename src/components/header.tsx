@@ -46,10 +46,10 @@ export function Header() {
 
   return (
     <header className={`site-header ${scrolled || menuOpen ? "scrolled" : ""}`}>
-      <div className="container-xl flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <PawIcon className={`h-6 w-6 ${lightText ? "text-white" : "text-burgundy"}`} />
-          <span className={`text-lg font-semibold ${lightText ? "text-white" : "text-dark"}`}>
+      <div className="container-xl site-header-inner">
+        <Link href="/" className="site-brand" aria-label="المخالب الناعمة، الصفحة الرئيسية">
+          <PawIcon className={`h-6 w-6 shrink-0 ${lightText ? "text-white" : "text-burgundy"}`} />
+          <span className={`site-brand-text text-lg font-semibold ${lightText ? "text-white" : "text-dark"}`}>
             المخالب الناعمة
             <span className={lightText ? "text-white/70" : "text-dark/50"}> البيطرية</span>
           </span>
@@ -69,12 +69,12 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="site-header-actions">
           <button
             type="button"
             onClick={openDrawer}
             aria-label="فتح سلة المشتريات"
-            className={`relative grid h-11 w-11 place-items-center rounded-full transition-colors ${
+            className={`relative grid h-11 w-11 shrink-0 place-items-center rounded-full transition-colors ${
               lightText ? "text-white hover:bg-white/10" : "text-dark hover:bg-sand"
             }`}
           >
@@ -96,8 +96,10 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
             aria-label={menuOpen ? "إغلاق القائمة" : "فتح القائمة"}
-            className={`grid h-11 w-11 place-items-center rounded-full lg:hidden ${
+            className={`grid h-11 w-11 shrink-0 place-items-center rounded-full lg:hidden ${
               lightText ? "text-white hover:bg-white/10" : "text-dark hover:bg-sand"
             }`}
           >
@@ -106,28 +108,24 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile full-screen menu */}
       <div
-        className={`fixed inset-x-0 top-20 bottom-0 z-[999] bg-cream transition-all duration-500 lg:hidden ${
-          menuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        id="mobile-navigation"
+        className={`mobile-menu-panel lg:hidden ${menuOpen ? "is-open" : ""}`}
+        aria-hidden={!menuOpen}
       >
-        <nav className="container-xl flex h-full flex-col justify-center gap-1 pb-24">
+        <nav className="mobile-menu-inner" aria-label="القائمة الرئيسية">
           {NAV_LINKS.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
-              className="border-b border-beige/80 py-4 text-2xl heading-section text-dark transition-all duration-500"
-              style={{
-                transitionDelay: menuOpen ? `${i * 60}ms` : "0ms",
-                opacity: menuOpen ? 1 : 0,
-                transform: menuOpen ? "translateY(0)" : "translateY(10px)",
-              }}
+              tabIndex={menuOpen ? 0 : -1}
+              className="mobile-menu-link"
+              style={{ transitionDelay: menuOpen ? `${i * 45}ms` : "0ms" }}
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/booking" className="btn btn-primary mt-6 w-full">
+          <Link href="/booking" tabIndex={menuOpen ? 0 : -1} className="btn btn-primary mt-6 w-full">
             احجز الآن
           </Link>
         </nav>

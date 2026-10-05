@@ -238,6 +238,55 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
+.site-header-inner { display: flex; height: 5rem; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-brand, .site-header-actions { display: flex; align-items: center; }
+.site-brand { min-width: 0; gap: 0.5rem; }
+.site-brand-text { white-space: nowrap; }
+.site-header-actions { flex-shrink: 0; gap: 0.35rem; }
+
+.mobile-menu-panel { position: fixed; inset-inline: 0; top: 5rem; bottom: 0; z-index: 999; overflow-y: auto; background: var(--cream); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity 0.25s ease, transform 0.25s ease; }
+.mobile-menu-panel.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.mobile-menu-inner { width: 100%; max-width: var(--container); min-height: 100%; margin-inline: auto; padding: 1rem 1.5rem 3rem; }
+.mobile-menu-link { display: block; width: 100%; border-bottom: 1px solid rgba(238, 229, 216, 0.9); padding: 1.05rem 0; color: var(--dark); font-size: clamp(1.25rem, 5vw, 1.75rem); font-weight: 600; line-height: 1.25; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s ease; }
+.mobile-menu-panel.is-open .mobile-menu-link { opacity: 1; transform: translateY(0); }
+.mobile-menu-link:hover, .mobile-menu-link:focus-visible { color: var(--burgundy); }
+
+/* SHOP LANDING */
+.shop-hero { overflow: hidden; background: #f1f1f1; }
+.shop-hero-grid { display: grid; min-height: 31rem; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); align-items: center; gap: 2rem; }
+.shop-hero-copy { padding-block: 4rem; }
+.shop-hero-art { position: relative; min-height: 31rem; align-self: stretch; }
+.shop-hero-art::before { content: ""; position: absolute; width: 26rem; height: 26rem; right: 8%; bottom: -7rem; border-radius: 50%; background: #d9d9d9; }
+.shop-hero-sale { position: absolute; top: 7rem; left: 8%; z-index: 2; display: grid; width: 6.5rem; height: 6.5rem; place-content: center; border-radius: 50%; background: #f47c38; color: white; text-align: center; transform: rotate(-8deg); }
+.shop-hero-sale span { font-size: 0.75rem; }
+.shop-hero-sale strong { font-size: 2rem; line-height: 1; }
+.shop-hero-paw { position: absolute; top: 4rem; right: 8%; z-index: 2; color: var(--burgundy); transform: rotate(18deg); }
+.shop-hero-art img { z-index: 1; }
+.shop-benefits { box-shadow: 0 8px 24px rgba(46, 41, 39, 0.04); }
+.shop-category-card { display: flex; min-height: 9rem; flex-direction: column; justify-content: center; border-radius: 1rem; padding: 1rem; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.shop-category-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+.shop-featured-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.shop-featured-card { overflow: hidden; border: 1px solid rgba(46, 41, 39, 0.08); border-radius: 1.25rem; background: white; box-shadow: var(--shadow-soft); }
+.shop-featured-image { position: relative; aspect-ratio: 1 / 0.86; overflow: hidden; background: var(--sand); }
+.shop-promo { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; border-radius: 1.25rem; background: linear-gradient(110deg, #f8d28c, #f3a04a); padding: 1.5rem 2rem; }
+
+@media (max-width: 767px) {
+  .site-header-inner { padding-inline: 1rem; }
+  .site-brand-text { font-size: 0.9rem; }
+  .site-brand-text span { display: none; }
+  .mobile-menu-inner { padding-inline: 1rem; }
+  .shop-hero-grid { display: block; min-height: auto; }
+  .shop-hero-copy { padding-block: 3rem 1rem; }
+  .shop-hero-art { min-height: 17rem; margin-top: -0.5rem; }
+  .shop-hero-art::before { width: 16rem; height: 16rem; right: 2%; bottom: -5rem; }
+  .shop-hero-sale { top: 3rem; left: 4%; width: 5rem; height: 5rem; }
+  .shop-hero-sale strong { font-size: 1.5rem; }
+  .shop-hero-paw { top: 2rem; right: 4%; }
+  .shop-featured-grid { grid-template-columns: 1fr; }
+  .shop-promo { align-items: flex-start; flex-direction: column; padding: 1.25rem; }
+  .shop-promo .btn { width: 100%; }
+}
+
 /* ============================================================
    SOCIAL FLOATING
    ============================================================ */
