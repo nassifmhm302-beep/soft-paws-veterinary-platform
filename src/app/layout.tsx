@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import type { ReactNode } from "react";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
     locale: "ar_SA",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
