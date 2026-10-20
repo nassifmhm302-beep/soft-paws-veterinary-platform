@@ -1,0 +1,3 @@
+:HL["/soft-paws-veterinary-platform/_next/static/chunks/12blis8s___2m.css","style"]
+:HL["/soft-paws-veterinary-platform/images/brand/q-clinic-logo-transparent.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"dctDkmQfc-09tJ5WQKYWN"}
