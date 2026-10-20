@@ -7,7 +7,7 @@ import { ShopClient } from "@/components/shop/shop-client";
 import { getProducts, getProductCategories } from "@/lib/queries";
 
 export const metadata: Metadata = {
-  title: "متجر Care Vet",
+  title: "متجر Q Clinic",
   description: "أغذية ومنتجات عناية وإكسسوارات مختارة بعناية لحيوانك الأليف.",
 };
 
@@ -23,13 +23,13 @@ export default async function ShopPage() {
       <section className="shop-hero">
         <div className="container-xl shop-hero-grid">
           <Reveal className="shop-hero-copy">
-            <p className="eyebrow mb-4 text-burgundy">متجر Care Vet</p>
+            <p className="eyebrow mb-4 text-burgundy">متجر Q Clinic</p>
             <h1 className="heading-display text-[clamp(2.5rem,6vw,5rem)] text-dark">
               كل ما يحتاجه<br />
-              <span className="text-burgundy">أليفك كل يوم</span>
+              <span className="text-burgundy">حيوانك اليوم</span>
             </h1>
             <p className="mt-6 max-w-md text-base leading-8 text-dark/65">
-              منتجات موثوقة للطعام والعناية والصحة، مختارة بعناية لتكمل رعاية العيادة في المنزل.
+              اختيارات موثوقة للأكل والعناية واللعب، يوصي بها فريقنا البيطري لتعيشوا أيامًا أسعد معًا.
             </p>
             <Link href="#products" className="btn btn-primary mt-8">
               تسوق الآن <ArrowIcon className="h-4 w-4" />
@@ -103,7 +103,7 @@ export default async function ShopPage() {
       </section>
 
       <section className="bg-cream pb-20 pt-4">
-        <div className="container-xl"><div className="shop-promo"><div><p className="text-sm font-semibold text-burgundy">عرض خاص من Care Vet</p><h2 className="mt-2 text-2xl font-semibold text-dark md:text-3xl">رفاهية أكثر، وراحة أكبر</h2><p className="mt-2 text-sm text-dark/60">اطلب منتجاتك المفضلة اليوم واستفد من توصيات فريقنا.</p></div><Link href="#products" className="btn btn-primary btn-sm">تصفح باقي المنتجات</Link></div></div>
+        <div className="container-xl"><div className="shop-promo"><div><p className="text-sm font-semibold text-burgundy">عرض خاص من Q Clinic</p><h2 className="mt-2 text-2xl font-semibold text-dark md:text-3xl">رفاهية أكثر، وراحة أكبر</h2><p className="mt-2 text-sm text-dark/60">اطلب منتجاتك المفضلة اليوم واستفد من توصيات فريقنا.</p></div><Link href="#products" className="btn btn-primary btn-sm">تصفح باقي المنتجات</Link></div></div>
       </section>
     </main>
   );

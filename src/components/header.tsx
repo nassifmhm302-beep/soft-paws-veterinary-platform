@@ -48,11 +48,11 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled || menuOpen ? "scrolled" : ""}`}>
       <div className="container-xl site-header-inner">
-        <Link href="/" className="site-brand" aria-label="Pet Friend Vet Clinic، الصفحة الرئيسية">
-          <img src={assetPath("/images/brand/pet-friend-logo.png")} alt="Pet Friend Vet Clinic" className="site-brand-logo" />
+        <Link href="/" className="site-brand" aria-label="Q Clinic، الصفحة الرئيسية">
+          <img src={assetPath("/images/brand/q-clinic-logo-transparent.png")} alt="Q Clinic" className="site-brand-logo" />
           <span className={`site-brand-text text-lg font-semibold ${lightText ? "text-white" : "text-dark"}`}>
-            Pet Friend
-            <span className={lightText ? "text-white/70" : "text-dark/50"}> Vet Clinic</span>
+            Q Clinic
+            <span className={lightText ? "text-white/70" : "text-dark/50"}> البيطرية</span>
           </span>
         </Link>
 

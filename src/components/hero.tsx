@@ -7,18 +7,18 @@ export function Hero() {
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-burgundy-dark">
       <div className="hero-media absolute inset-0">
         <Image
-          src="/images/care-vet-hero.jpeg"
-          alt="طبيب بيطري يعتني بحيوان أليف في عيادة Care Vet"
+          src="https://images.pexels.com/photos/19490691/pexels-photo-19490691.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1600&w=1800"
+          alt="كلب وقطة في لحظة ألفة ودفء، يمثلان رعاية متكاملة للحيوانات الأليفة"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[center_30%] md:object-[75%_40%]"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(20,18,18,.12) 0%, rgba(20,18,18,.28) 48%, rgba(20,18,18,.72) 100%)",
+              "linear-gradient(90deg, rgba(40,30,28,.55) 0%, rgba(40,30,28,.32) 42%, rgba(40,30,28,.08) 70%)",
           }}
         />
         <div
@@ -33,19 +33,19 @@ export function Hero() {
             className="eyebrow mb-5 text-beige opacity-0"
             style={{ animation: "heroItemIn .8s .2s cubic-bezier(.22,1,.36,1) forwards" }}
           >
-            CARE VET
+            Q Clinic
           </p>
           <h1
             className="heading-display text-[clamp(2.4rem,5.4vw,4.25rem)] text-white opacity-0"
             style={{ animation: "heroItemIn .9s .35s cubic-bezier(.22,1,.36,1) forwards" }}
           >
-            رعاية بيطرية تمنح حيوانك حياة أجمل
+            رعاية متكاملة لحيوانك الأليف
           </h1>
           <p
             className="mt-6 max-w-md text-base leading-8 text-white/85 opacity-0"
             style={{ animation: "heroItemIn .9s .5s cubic-bezier(.22,1,.36,1) forwards" }}
           >
-            خبرة بيطرية، عناية متكاملة، واهتمام حقيقي بكل حيوان نعتني به في جدة.
+            رعاية بيطرية متخصصة، حجز إلكتروني، ومنتجات موثوقة في مكان واحد.
           </p>
           <div
             className="mt-9 flex flex-wrap items-center gap-4 opacity-0"

@@ -54,7 +54,7 @@ export default async function HomePage() {
                 رعاية نضع فيها صحة حيوانك أولًا
               </h2>
               <p className="mt-6 max-w-md text-base leading-8 text-dark/65">
-                في Pet Friend، نؤمن أن كل حيوان أليف يستحق رعاية دقيقة في بيئة هادئة، بعيدًا عن أجواء العيادات التقليدية
+                في Q Clinic، نؤمن أن كل حيوان أليف يستحق رعاية دقيقة في بيئة هادئة، بعيدًا عن أجواء العيادات التقليدية
                 الباردة. فريقنا الطبي يرافقك في كل خطوة، من الفحص الأول وحتى المتابعة طويلة المدى.
               </p>
               <Link href="/about" className="link-arrow mt-8 inline-flex text-sm">
@@ -100,7 +100,7 @@ export default async function HomePage() {
       {/* WHY US — typography led, no heavy cards */}
       <section className="bg-cream py-24 md:py-32">
         <div className="container-xl">
-          <SectionHeading eyebrow="لماذا Pet Friend" title="تفاصيل صغيرة تصنع فرقًا كبيرًا" align="center" />
+          <SectionHeading eyebrow="لماذا Q Clinic" title="تفاصيل صغيرة تصنع فرقًا كبيرًا" align="center" />
           <div className="mt-16 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {WHY_US.map((item, i) => (
               <Reveal key={item.number} delay={(i % 3) * 90}>
